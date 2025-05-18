@@ -100,7 +100,7 @@ onprem_project:
 
 ---
 
-## dbt → Power BI Flow
+## Airbyte → MySQL Server → dbt → Power BI Flow
 ```mermaid
 graph LR
   A[Airbyte] -->|Raw data| B(MySQL)
@@ -112,6 +112,6 @@ graph LR
 ---
 
 ## License
-Nexsis Analytics Teams © 2025 [Estifanos Alamirew, Abel Solomon, Ruhama Abraham, Michael Mesfin, Ramlla Akmel, Hanif Mohammednasir].  
+Nexsis Analytics Teams © 2025 [Estifanos Alamirew, Abel Solomon, Ruhama Abraham, Michael Mesfin, Ramlla Akmel, Hanif Mohammednasir, Sead Mohammed].  
 **Note**: Power BI files (.pbix) require [Git LFS](https://git-lfs.github.com/).
 ```
