@@ -1,0 +1,9 @@
+# Update transform/dbt/profiles.yml for MySQL:
+
+onprem_project:
+  target: dev
+  outputs:
+    dev:
+      type: mysql
+      host: "{{ env_var('MYSQL_HOST') }}"
+      schema: analytics
