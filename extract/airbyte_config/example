@@ -1,0 +1,7 @@
+# Example: Salesforce to MySQL
+source:
+  type: "salesforce"
+  client_id: "${SF_CLIENT_ID}"  # Env variables
+destination:
+  type: "mysql"
+  host: "onprem-db.company.net"
