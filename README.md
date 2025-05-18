@@ -1,3 +1,3 @@
-# Complete-Data-ETL-Project-01
+# Complete-Data-Engineering-and-Analysis-Project
 
 This project is a team project consisting of data engineers and data analysts. Starting from data extraction, ingestion, cleaning, transforming, loading up to doing analysis and visualization. We will use a variety of on-premise and cloud platforms to make this happen. From using Airbyte for data ingestion to mysql server and transforming it using dbt upto analysing it and making visualization using power BI.
