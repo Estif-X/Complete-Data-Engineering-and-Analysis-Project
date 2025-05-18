@@ -16,24 +16,23 @@ Tools Used
 
 ---
 
-📂 Repository Structure
-```
+Repository Structure
 
+```
 complete-data-engineering-and-analysis-project/
 ├── extract/        # Airbyte configs + source connectors
 ├── transform/      # dbt models (staging → marts)
 ├── visualize/      # Power BI reports + DAX
 ├── orchestration/  # Docker + Airflow setup
 └── data/           # Raw → Processed → Power BI datasets
-
 ```
 
 ---
 
 Team Responsibilities
-| Role                | Tasks                          | Key Files/Dirs                     |
-|---------------------|--------------------------------|------------------------------------|
-| Data Engineers  | Airbyte setup, dbt pipelines   | `extract/`, `transform/dbt/`       |
+| Role                | Tasks                          | Key Files/Dirs                   |
+|---------------------|--------------------------------|----------------------------------|
+| Data Engineers  | Airbyte setup, dbt pipelines   | `extract/`, `transform/dbt/`         |
 | Data Analysts   | Power BI reports, dbt marts    | `visualize/`, `transform/dbt/marts/` |
 
 ---
