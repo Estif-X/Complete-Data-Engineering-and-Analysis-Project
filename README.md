@@ -100,7 +100,7 @@ onprem_project:
 
 ---
 
-## Airbyte → MySQL Server → dbt → Power BI Flow
+## Airbyte → MySQL → dbt → Power BI Flow
 ```mermaid
 graph LR
   A[Airbyte] -->|Raw data| B(MySQL)
