@@ -25,7 +25,7 @@ complete-data-engineering-and-analysis-project/
 ├── transform/      # dbt models (staging → marts)
 ├── visualize/      # Power BI reports + DAX
 ├── orchestration/  # Docker + Airflow setup
-└── data/           # Raw → Processed → Power BI datasets
+└── datasets/           # Raw → Processed → Power BI datasets
 ```
 
 ---
