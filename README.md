@@ -1,16 +1,16 @@
 ```
 Complete-Data-Engineering-and-Analysis-Project
 
-Data Pipeline: Airbyte → MySQL → dbt → Power BI
+Data Pipeline: Airbyte → PostgreSQL → dbt → Power BI
 
-A collaborative data pipeline for extracting, transforming, loading and visualizing data. Built for data engineers (Airbyte, dbt, MySQL) and analysts (Power BI) to work seamlessly together.
+A collaborative data pipeline for extracting, transforming, loading and visualizing data. Built for data engineers (Airbyte, dbt, PostgreSQL) and analysts (Power BI) to work seamlessly together.
 
 ---
 
 Tools Used
 
 - Extract: [Airbyte] (https://airbyte.com/) (Configured YAML connectors)
-- Storage: [MySQL] (https://www.mysql.com/) (On-premise database)
+- Storage: [PostgreSQL] (https://www.postgresql.com/) (On-premise database)
 - Transform: [dbt] (https://www.getdbt.com/) (SQL-based transformations)
 - Visualize: [Power BI] (https://powerbi.microsoft.com/) (DAX/metrics dashboards)
 
@@ -53,7 +53,7 @@ For Data Engineers
    ```
 
 ### For Data Analysts
-1. **Connect Power BI** to MySQL database:  
+1. **Connect Power BI** to PostgreSQL database:  
    - Server: `localhost` (or on-premise IP)  
    - Database: `marts` (dbt-generated tables)  
 2. Open `visualize/powerbi/template.pbix` as a starter report.
@@ -65,24 +65,24 @@ Configuration
 ### Airbyte Sources
 Edit YAML configs in `extract/airbyte_config/`:
 ```yaml
-# Example: Salesforce to MySQL
+# Example: Salesforce to PostgreSQL
 source:
   type: "salesforce"
   client_id: "${SF_CLIENT_ID}"  # Env variables
 destination:
-  type: "mysql"
+  type: "postgresql"
   host: "onprem-db.company.net"
 ```
 
 ### dbt Profiles
-Update `transform/dbt/profiles.yml` for MySQL:
+Update `transform/dbt/profiles.yml` for POSTGRESQL:
 ```yaml
 onprem_project:
   target: dev
   outputs:
     dev:
-      type: mysql
-      host: "{{ env_var('MYSQL_HOST') }}"
+      type: postgresql
+      host: "{{ env_var('POSTGRESQL_HOST') }}"
       schema: analytics
 ```
 
@@ -100,10 +100,10 @@ onprem_project:
 
 ---
 
-## Airbyte → MySQL → dbt → Power BI Flow
+## Airbyte → PostgreSQL → dbt → Power BI Flow
 ```mermaid
 graph LR
-  A[Airbyte] -->|Raw data| B(MySQL)
+  A[Airbyte] -->|Raw data| B(PostgreSQL)
   B -->|dbt staging| C{Transform}
   C -->|dbt marts| D[Power BI]
   D --> E{{Dashboard}}
