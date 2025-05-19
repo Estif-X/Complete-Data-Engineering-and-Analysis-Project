@@ -1,7 +1,7 @@
-# Example: Salesforce to MySQL
+# Example: Salesforce to PostgreSQL
 source:
   type: "salesforce"
   client_id: "${SF_CLIENT_ID}"  # Env variables
 destination:
-  type: "mysql"
+  type: "postgresql"
   host: "onprem-db.company.net"
