@@ -1,7 +1,7 @@
 ```
 Complete-Data-Engineering-and-Analysis-Project
 
-Data Pipeline: Airbyte → PostgreSQL → dbt → Power BI
+Data Pipeline: Data Sources → Airbyte → PostgreSQL → dbt → Power BI
 
 A collaborative data pipeline for extracting, transforming, loading and visualizing data. Built for data engineers (Airbyte, dbt, PostgreSQL) and analysts (Power BI) to work seamlessly together.
 
